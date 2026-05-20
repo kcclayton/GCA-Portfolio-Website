@@ -80,14 +80,28 @@ section {
 
 /* Hero Section */
 .hero {
-    background-color: rgba(203, 225, 233, 0.9);
+    background-color: #fff9f4;
     padding: 6rem 0 5rem;
-    text-align: center;
     width: min(1100px, calc(100% - 40px));
-    margin: 2rem auto 2rem;
+    margin: 3rem auto 3rem;
     box-shadow: 0 30px 70px rgba(114, 94, 76, 0.08);
     border: 1px solid rgba(117, 93, 76, 0.12);
     border-radius: 32px;
+}
+
+.hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 0 1rem;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero-copy {
+    width: 100%;
+    max-width: 720px;
 }
 
 .hero h1 {
@@ -98,7 +112,7 @@ section {
 }
 
 .hero-subtitle,
-.hero p {
+.hero-copy p {
     max-width: 720px;
     margin: 0 auto 1rem;
     color: #59524a;
@@ -111,6 +125,147 @@ section {
     font-style: italic;
     opacity: 0.85;
     margin-bottom: 1.5rem;
+}
+
+.hero-profile {
+    flex: 0 0 240px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-placeholder {
+    width: 220px;
+    height: 220px;
+    background: linear-gradient(180deg, #f6efe4 0%, #e7dccf 100%);
+    border: 2px dashed rgba(95, 81, 68, 0.3);
+    border-radius: 32px;
+    display: grid;
+    place-items: center;
+    color: #6c5a4b;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem;
+}
+
+.book-gallery {
+    margin-top: 2rem;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+}
+
+.place-carousel {
+    margin-top: 2rem;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(220px, 280px);
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel-track::-webkit-scrollbar {
+    height: 10px;
+}
+
+.carousel-track::-webkit-scrollbar-thumb {
+    background: rgba(95, 81, 68, 0.3);
+    border-radius: 999px;
+}
+
+.place-card {
+    scroll-snap-align: center;
+    flex: 0 0 auto;
+}
+
+.place-cover {
+    width: 100%;
+    height: 220px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, #dcd0c1 0%, #f6efe4 100%);
+    border: 1px dashed rgba(111, 92, 72, 0.25);
+    display: grid;
+    place-items: center;
+    color: #7a6451;
+    font-weight: 700;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.place-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.book-card {
+    display: block;
+    background: rgba(255, 250, 244, 0.9);
+    border: 1px solid rgba(142, 119, 100, 0.14);
+    border-radius: 24px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 14px 30px rgba(96, 77, 60, 0.06);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.book-card {
+    color: inherit;
+    text-decoration: none;
+}
+
+.book-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(96, 77, 60, 0.10);
+}
+
+.book-cover {
+    width: 100%;
+    min-height: 170px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #e9d8c3 0%, #f6efe4 100%);
+    border: 1px dashed rgba(111, 92, 72, 0.25);
+    color: #7a6451;
+    font-weight: 700;
+    display: grid;
+    place-items: center;
+    margin-bottom: 0.9rem;
+    overflow: hidden;
+}
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.book-title,
+.book-author {
+    margin: 0;
+    color: #4f4235;
+}
+
+.book-title {
+    font-weight: 700;
+    font-size: 0.98rem;
+    margin-bottom: 0.35rem;
+}
+
+.book-author {
+    font-size: 0.9rem;
+    opacity: 0.82;
 }
 
 /* Section Titles */
@@ -132,6 +287,11 @@ h2::after {
     border-radius: 999px;
 }
 
+.projects h2::after,
+.contact h2::after {
+    margin: 1rem auto 0;
+}
+
 p {
     color: #574f49;
 }
@@ -142,8 +302,6 @@ p {
     background-color: rgba(255, 255, 255, 0.85);
     border-radius: 30px;
     margin-bottom: 2rem;
-    margin-left: 1em;
-    margin-right: 1em;
     border: 5px solid rgba(0, 0, 0, 0.00);
     /* border: 1px solid rgba(141, 122, 103, 0.12); */
 }
@@ -156,6 +314,10 @@ p {
     max-width: 820px;
     font-size: 1.05rem;
     margin-bottom: 0;
+}
+
+.about #about-subsection {
+    margin-top: 3rem;
 }
 
 /* Projects Section */
@@ -200,16 +362,6 @@ p {
     line-height: 1.8;
 }
 
-.project-card::before {
-    content: '•';
-    position: absolute;
-    top: 1.5rem;
-    right: 1.7rem;
-    color: rgba(143, 106, 93, 0.3);
-    font-size: 4rem;
-    pointer-events: none;
-}
-
 /* Button Styles */
 .btn {
     display: inline-block;
@@ -221,6 +373,7 @@ p {
     border: 1px solid rgba(95, 81, 68, 0.15);
     transition: transform 0.25s ease, background-color 0.25s ease;
     font-weight: 600;
+    margin: 0 1rem 0 0;
 }
 
 .btn:hover {
