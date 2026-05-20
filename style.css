@@ -80,7 +80,7 @@ section {
 
 /* Hero Section */
 .hero {
-    background-color: rgb(233, 217, 201);
+    background-color: #fff9f4;
     padding: 6rem 0 5rem;
     width: min(1100px, calc(100% - 40px));
     margin: 3rem auto 3rem;
@@ -158,13 +158,67 @@ section {
     margin-top: 1.25rem;
 }
 
+.place-carousel {
+    margin-top: 2rem;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(220px, 280px);
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel-track::-webkit-scrollbar {
+    height: 10px;
+}
+
+.carousel-track::-webkit-scrollbar-thumb {
+    background: rgba(95, 81, 68, 0.3);
+    border-radius: 999px;
+}
+
+.place-card {
+    scroll-snap-align: center;
+    flex: 0 0 auto;
+}
+
+.place-cover {
+    width: 100%;
+    min-height: 200px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, #dcd0c1 0%, #f6efe4 100%);
+    border: 1px dashed rgba(111, 92, 72, 0.25);
+    display: grid;
+    place-items: center;
+    color: #7a6451;
+    font-weight: 700;
+    text-align: center;
+}
+
 .book-card {
+    display: block;
     background: rgba(255, 250, 244, 0.9);
     border: 1px solid rgba(142, 119, 100, 0.14);
     border-radius: 24px;
     padding: 1rem;
     text-align: center;
     box-shadow: 0 14px 30px rgba(96, 77, 60, 0.06);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.book-card {
+    color: inherit;
+    text-decoration: none;
+}
+
+.book-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(96, 77, 60, 0.10);
 }
 
 .book-cover {
@@ -178,6 +232,14 @@ section {
     display: grid;
     place-items: center;
     margin-bottom: 0.9rem;
+    overflow: hidden;
+}
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .book-title,
@@ -214,6 +276,11 @@ h2::after {
     display: block;
     margin-top: 1rem;
     border-radius: 999px;
+}
+
+.projects h2::after,
+.contact h2::after {
+    margin: 1rem auto 0;
 }
 
 p {
@@ -286,16 +353,6 @@ p {
     line-height: 1.8;
 }
 
-.project-card::before {
-    content: '•';
-    position: absolute;
-    top: 1.5rem;
-    right: 1.7rem;
-    color: rgba(143, 106, 93, 0.3);
-    font-size: 4rem;
-    pointer-events: none;
-}
-
 /* Button Styles */
 .btn {
     display: inline-block;
@@ -307,6 +364,7 @@ p {
     border: 1px solid rgba(95, 81, 68, 0.15);
     transition: transform 0.25s ease, background-color 0.25s ease;
     font-weight: 600;
+    margin: 0 1rem 0 0;
 }
 
 .btn:hover {

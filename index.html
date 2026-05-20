@@ -10,7 +10,7 @@
     <!-- NAVBAR  -->
     <nav class="navbar">
         <div class="container">
-            <h1 class="logo">KC's Portfolio</h1>
+            <h1 class="logo nav-links"><a href="#home">KC's Portfolio</a></h1>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -58,39 +58,49 @@
                 <div class="book-grid">
 
                     <!-- Clytemnestra -->
-                    <div class="book-card">
-                        <div class="book-cover">Cover</div>
+                    <a href="https://en.wikipedia.org/wiki/Clytemnestra_(novel)" class="book-card" target="_blank" rel="noopener" title="Go to Clytemnestra Wikipedia">
+                        <div class="book-cover">
+                            <img src="clytemnestra.jpg" alt="Clytemnestra book cover">
+                        </div>
                         <p class="book-title">Clytemnestra</p>
                         <p class="book-author">Costanza Casati</p>
-                    </div>
+                    </a>
 
-                    <!-- Book 2 -->
-                    <div class="book-card">
-                        <div class="book-cover">Cover</div>
-                        <p class="book-title">Book Title</p>
-                        <p class="book-author">Author Name</p>
-                    </div>
+                    <!-- Lady Tan's Circle of Women -->
+                    <a href="https://en.wikipedia.org/wiki/Lady_Tan%27s_Circle_of_Women" class="book-card" target="_blank" rel="noopener" title="Go to Lady Tan's Circle of Women Wikipedia">
+                        <div class="book-cover">
+                            <img src="lady-tan.jpg" alt="Lady Tan's Circle of Women book cover">
+                        </div>
+                        <p class="book-title">Lady Tan's Circle of Women</p>
+                        <p class="book-author">Lisa See</p>
+                    </a>
 
-                    <!-- Book 3 -->
-                    <div class="book-card">
-                        <div class="book-cover">Cover</div>
-                        <p class="book-title">Book Title</p>
-                        <p class="book-author">Author Name</p>
-                    </div>
+                    <!-- What My Bones Know -->
+                    <a href="https://en.wikipedia.org/wiki/Stephanie_Foo#Writing" class="book-card" target="_blank" rel="noopener" title="Go to Stephanie Foo's Wikipedia">
+                        <div class="book-cover">
+                            <img src="what-my-bones-know.jpg" alt="What My Bones Know book cover">
+                        </div>
+                        <p class="book-title">What My Bones Know</p>
+                        <p class="book-author">Stephanie Foo</p>
+                    </a>
 
-                    <!-- Book 4 -->
-                    <div class="book-card">
-                        <div class="book-cover">Cover</div>
-                        <p class="book-title">Book Title</p>
-                        <p class="book-author">Author Name</p>
-                    </div>
+                    <!-- A Brief History of Time -->
+                    <a href="https://en.wikipedia.org/wiki/A_Brief_History_of_Time" class="book-card" target="_blank" rel="noopener" title="Go to A Brief History of Time Wikipedia">
+                        <div class="book-cover">
+                            <img src="history-of-time.jpg" alt="A Brief History of Time book cover">
+                        </div>
+                        <p class="book-title">A Brief History of Time</p>
+                        <p class="book-author">Stephen Hawking</p>
+                    </a>
 
-                    <!-- Book 5 -->
-                    <div class="book-card">
-                        <div class="book-cover">Cover</div>
-                        <p class="book-title">Book Title</p>
-                        <p class="book-author">Author Name</p>
-                    </div>
+                    <!-- Fourth Wing -->
+                    <a href="https://en.wikipedia.org/wiki/Fourth_Wing" class="book-card" target="_blank" rel="noopener" title="Go to Fourth Wing Wikipedia">
+                        <div class="book-cover">
+                            <img src="fourth-wing.jpg" alt="Fourth Wing book cover">
+                        </div>
+                        <p class="book-title">Fourth Wing</p>
+                        <p class="book-author">Rebecca Yarros</p>
+                    </a>
 
                 </div>
             </div>
@@ -98,7 +108,24 @@
             <!-- Favorite Places Section -->
             <div id="about-subsection">
                 <h2>Favorite Places</h2>
-                <p>I also enjoy being outside! Here are photos from some of my favorite places.</p>
+                <p>I also really enjoy being outside! Here are photos from some of my favorite places.</p>
+            </div>
+
+            <div class="place-carousel">
+                <div class="carousel-track">
+                    <div class="place-card">
+                        <div class="place-cover">Place photo</div>
+                    </div>
+                    <div class="place-card">
+                        <div class="place-cover">Place photo</div>
+                    </div>
+                    <div class="place-card">
+                        <div class="place-cover">Place photo</div>
+                    </div>
+                    <div class="place-card">
+                        <div class="place-cover">Place photo</div>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -109,20 +136,26 @@
         <div class="container">
             <h2>My Projects</h2>
             <div class="projects-grid">
+                
+                <!-- NextDorm -->
                 <div class="project-card">
-                    <h3>Project One</h3>
-                    <p>Brief description of your project and what technologies you used.</p>
-                    <a href="#" class="btn">View Project</a>
+                    <h3>NextDorm</h3>
+                    <p>Social media made for students living on college campuses.</p>
+                    <a href="https://github.com/kcclayton/CSC-340" class="btn" target="_blank" rel="noopener" title="NextDorm GitHub project">View Project</a>
                 </div>
+
+                <!-- Profile Card -->
                 <div class="project-card">
-                    <h3>Project Two</h3>
-                    <p>Brief description of your project and what technologies you used.</p>
-                    <a href="#" class="btn">View Project</a>
+                    <h3>Profile Card</h3>
+                    <p>Info about myself, similar to this website.</p>
+                    <a href="#projects" class="btn" title="No link here! Still in progress">In Progress...</a>
                 </div>
+
+                <!-- Product Landing Page -->
                 <div class="project-card">
-                    <h3>Project Three</h3>
-                    <p>Brief description of your project and what technologies you used.</p>
-                    <a href="#" class="btn">View Project</a>
+                    <h3>Product Landing Page</h3>
+                    <p>A responsive landing page for a fictional product.</p>
+                    <a href="#projects" class="btn" title="No link here! Still in progress">In Progress...</a>
                 </div>
             </div>
         </div>
@@ -132,15 +165,17 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2>Get In Touch</h2>
-            <p>Feel free to reach out! You can contact me at:</p>
-            <a href="mailto:your@email.com" class="btn">Email Me</a>
+            <p>Feel free to reach out! You can contact me via:</p>
+            <a href="mailto:kcclayton@uncg.edu" class="btn" title="Send me an email">Email</a>
+            <a href="https://www.linkedin.com/in/kc-clayton-b19720255/" class="btn" target="_blank" rel="noopener" title="DM me on LinkedIn">LinkedIn</a>
+            <a href="https://github.com/kcclayton" class="btn" target="_blank" rel="noopener" title="Follow me on GitHub">GitHub</a>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 My Portfolio. All rights reserved.</p>
+            <p>&copy; 2026 KC's Portfolio. All rights reserved.</p>
         </div>
     </footer>
 </body>
