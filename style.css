@@ -1,65 +1,90 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
 
-/* General Styles */
+/* GENERAL FORMATTING */
 * {
+
+    /* reset browser default to 0 to ensure consistency */
     margin: 0;
     padding: 0;
+
+    /* includes object padding and border in declared height for more intuitive styling */
     box-sizing: border-box;
+
 }
 
 body {
-    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: radial-gradient(circle at top left, rgba(237, 226, 211, 0.5), transparent 35%), #f7efe7;
-    color: #3d3a34;
-    line-height: 1.7;
+
+    /* default font / colors + background texture */
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; /* setting default + fallback font families */
+    background: radial-gradient(circle at top left, rgba(237, 226, 211, 0.5), transparent 35%), #f7efe7; /* glowy texture effect to prevent flat look */
+    color: #3d3a34; /* default text color */
+    line-height: 1.7; /* larger than default line spacing */
+
 }
 
 body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image: radial-gradient(circle, rgba(255,255,255,0.45) 1px, transparent 1px);
-    background-size: 80px 80px;
-    pointer-events: none;
-    opacity: 0.35;
+
+    /* background texture to prevent flat appearance*/
+    content: ''; /* pseudo-element */
+    position: fixed; /* stays in place when scrolling*/
+    inset: 0; /* covers the entire viewport */
+    background-image: radial-gradient(circle, rgba(255,255,255,0.45) 1px, transparent 1px); /* subtle dot, automatically defaults to repeat */
+    background-size: 80px 80px; /* size of single dot tile */
+    pointer-events: none; /* prevents cursor from interacting with element */
+    opacity: 0.35; /* semi-transparent */
+
 }
 
 .container {
+    
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
+
 }
 
 section {
-    position: relative;
+
+    position: relative; /* allows child elements to be positioned relative to section using position: absolute */
+
 }
 
-/* Navigation */
+/* NAVBAR */
 .navbar {
+
     background-color: rgba(255, 255, 255, 0.9);
     color: #3d3a34;
     padding: 1.2rem 0;
-    position: sticky;
+
+    /* pin navbar to top of window*/
+    position: sticky; 
     top: 0;
-    z-index: 100;
-    backdrop-filter: blur(10px);
+    z-index: 100; /* keeps navbar at top layer */
+
+    backdrop-filter: blur(10px); /* subtle blur along bottom of navbar*/
     border-bottom: 1px solid rgba(61, 58, 52, 0.08);
+
 }
 
 .navbar .container {
-    display: flex;
-    justify-content: space-between;
+
+    display: flex; /* children in a row by default */
+    justify-content: space-between; /* distributes children evenly within row */
     align-items: center;
+
 }
 
 .logo {
+
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.75rem;
     font-weight: 600;
     letter-spacing: 0.04em;
+
 }
 
 .nav-links {
+    
     display: flex;
     list-style: none;
     gap: 1.75rem;
