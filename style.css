@@ -138,7 +138,7 @@ section {
     height: 220px;
     background: linear-gradient(180deg, #f6efe4 0%, #e7dccf 100%);
     border: 2px solid rgba(95, 81, 68, 0.18);
-    border-radius: 32px;
+    border-radius: 150px;
     overflow: hidden;
     display: grid;
     place-items: center;
