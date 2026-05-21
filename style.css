@@ -133,6 +133,24 @@ section {
     justify-content: center;
 }
 
+.profile-slot {
+    width: 220px;
+    height: 220px;
+    background: linear-gradient(180deg, #f6efe4 0%, #e7dccf 100%);
+    border: 2px solid rgba(95, 81, 68, 0.18);
+    border-radius: 32px;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+.profile-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 .profile-placeholder {
     width: 220px;
     height: 220px;
@@ -160,7 +178,6 @@ section {
 
 .place-carousel {
     margin-top: 2rem;
-    overflow: hidden;
 }
 
 .carousel-track {
@@ -169,17 +186,72 @@ section {
     grid-auto-columns: minmax(220px, 280px);
     gap: 1rem;
     padding-bottom: 0.5rem;
-    overflow-x: auto;
+    overflow-x: hidden;
     scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
 }
 
 .carousel-track::-webkit-scrollbar {
-    height: 10px;
+    display: none;
 }
 
-.carousel-track::-webkit-scrollbar-thumb {
-    background: rgba(95, 81, 68, 0.3);
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.85rem;
+    margin: 1rem auto 0;
+    width: fit-content;
+    max-width: 100%;
+}
+
+.carousel-button {
+    width: 42px;
+    height: 42px;
     border-radius: 999px;
+    border: 1px solid rgba(95, 81, 68, 0.18);
+    background-color: #fff7f0;
+    color: #5f5144;
+    font-size: 1.35rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+    transform: translateY(-1px);
+    background-color: #f2e5da;
+    box-shadow: 0 10px 20px rgba(96, 77, 60, 0.08);
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.55rem;
+    min-width: 180px;
+    width: min(260px, 100%);
+    overflow: hidden;
+    padding: 0.25rem 0;
+}
+
+.carousel-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    border: 1px solid rgba(143, 122, 103, 0.45);
+    background: rgba(143, 122, 103, 0.45);
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.carousel-dot:hover,
+.carousel-dot:focus {
+    transform: scale(1.1);
+    background: rgba(143, 122, 103, 0.55);
+}
+
+.carousel-dot.active {
+    background: rgba(95, 81, 68, 0.85);
 }
 
 .place-card {
